@@ -2,11 +2,16 @@
 
 This is the office implementation of ***VQCNIR: Clearer Night Image Restoration with Vector-Quantized Codebook, AAAI2024.***
 
-***Wenbin Zou, Hongxia Gao, Tian Ye, Liang Chen, Weipeng Yang, Shasha Huang, Hongshen Chen, Sixiang Chen***
+<a href="https://alexzou14.github.io">Wenbin Zou*,</a> Hongxia Gao, 
+<a href="https://owen718.github.io">Tian Ye,</a> Liang Chen, Weipeng Yang, Shasha Huang, Hongshen Chen, 
+<a href="https://ephemeral182.github.io">Sixiang Chen</a>
+<br>
 
 ***SCUT｜ HKUST(GZ)｜FJNU***
 
-[Arxiv](https://arxiv.org/pdf/2312.08606), [Supplementary](Figures/VQCNIR_supp.pdf)
+[![paper](https://img.shields.io/badge/arXiv-Paper-brightgreen)](https://arxiv.org/pdf/2312.08606)
+[![supplement](https://img.shields.io/badge/Supplementary-Material-B85252)](Figures/VQCNIR_supp.pdf)
+
 
 <hr />
 
@@ -35,8 +40,17 @@ conda install pytorch=1.12
 pip install opencv-python ....
 ```
 
-## Model Testing
-**You can find the model weights under the model_wight folder: VQCNIR_LOLBlur_G.pth.**
+## Dataset
+:open_file_folder: We train and test our LEDNet in LOL-Blur, RealLOL-Blur benchmarks. The download links of datasets are provided.(The datasets are hosted on both Google Drive and BaiduPan) 
+
+| Dataset | Link | Number | Description|
+| :----- | :--: | :----: | :---- | 
+| LOL-Blur | [Google Drive](https://drive.google.com/drive/folders/11HcsiHNvM7JUlbuHIniREdQ2peDUhtwX?usp=sharing) / [BaiduPan (key: dz6u)](https://pan.baidu.com/s/1CPphxCKQJa_iJAGD6YACuA) | 12,000 | A total of 170 videos for training and 30 videos for testing, each of which has 60 frames, amounting to 12,000 paired data. (Note that the first and last 30 frames of each video are NOT consecutive, and their darknesses are simulated differently as well.)|
+| Real-LOL-Blur| [Google Drive](https://drive.google.com/drive/folders/1fXUA5SzXj46ISw9aUjSors1u6M9VlKAn?usp=sharing) / [BaiduPan (key: fh32)](https://pan.baidu.com/s/1sP87VGiof_NixZsA8dhalA) | 1354 | 482 real-world night blurry images (from [RealBlur-J Dataset](http://cg.postech.ac.kr/research/realblur/)) + 872 real-world night blurry images acquired by Sony RX10 IV camera.|
+
+## Inference Stage
+**You can download the model weights:** [Google Drive](https://drive.google.com/file/d/1bqGF7ee93ViI0V0uwlDU008QinGFWSRP/view?usp=drive_link), [BaiduYun(code:ALEX)](https://pan.baidu.com/s/1vQOhjLYuctqA5wI-1pYrjw?pwd=ALEX)
+
 Run the following commands:
 ```
 python3  inference_vqlol.py -i dataset_path -w model_weight  -o output_dir 
@@ -49,6 +63,9 @@ python3  inference_vqlol.py -i dataset_path -w model_weight  -o output_dir
 ## Contact
 **Wenbin Zou: alexzou14@foxmail.com** 
 
+## Acknowledgement
+
+This project is based on [BasicSR](https://github.com/XPixelGroup/BasicSR) and [FeMaSR](https://github.com/chaofengc/FeMaSR). We calculate evaluation metrics using [IQA-PyTorch](https://github.com/chaofengc/IQA-PyTorch) toolbox. Thanks for their awesome works.
 
 ## Citation
 ```bibtex
