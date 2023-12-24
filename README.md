@@ -44,7 +44,7 @@ python3  inference_vqlol.py -i dataset_path -w model_weight  -o output_dir
 
 ## More Results
 ![fig3.png](Figures/Fig3.png)
-![fig4.png](Figures/fig4.png)
+![fig4.png](Figures/Fig4.png)
 
 ## Contact
 **Wenbin Zou: alexzou14@foxmail.com** 
