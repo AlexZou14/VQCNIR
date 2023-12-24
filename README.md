@@ -2,7 +2,7 @@
 
 This is the office implementation of ***VQCNIR: Clearer Night Image Restoration with Vector-Quantized Codebook, AAAI2024.***
 
-<a href="https://alexzou14.github.io">Wenbin Zou*,</a> Hongxia Gao, 
+<a href="https://alexzou14.github.io">Wenbin Zou*,</a> Hongxia Gao <sup>✉️</sup>, 
 <a href="https://owen718.github.io">Tian Ye,</a> Liang Chen, Weipeng Yang, Shasha Huang, Hongshen Chen, 
 <a href="https://ephemeral182.github.io">Sixiang Chen</a>
 <br>
